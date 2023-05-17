@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+    <style>
+        #main {
+            border: 3px solid orange;
+            width: 300px;
+            background-color: black;
+            padding-bottom: 30px;
+            margin-top: 150px;
+        }
+
+        .set {
+            width: 80px;
+            height: 60px;
+            display: none;
+            border: 2px solid white;
+        }
+
+        button {
+            width: 180px;
+            height: 40px;
+            background-color: yellow;
+            color: red;
+            border: 2px solid red;
+            font-weight: bolder;
+            border-radius: 5px;
+            font-size: 24px;
+            margin-bottom: 50px;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            color: orange;
+        }
+
+        p {
+            font-weight: bold;
+            color: white;
+        }
+
+        span {
+            color: rgb(140, 0, 255);
+        }
+
+        .see {
+            display: none;
+        }
+
+        li {
+            list-style-type: none;
+            font-size: 20px;
+            margin-right: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div id="main">
+            <ul>
+                <li>
+                    <a href="./Home.html" style="color: red; text-decoration: none;">Home Page</a>
+                </li>
+            </ul>
+            <h1>Dice Game</h1>
+            <p><span>Note: </span>Click the button dice.</p>
+            <button onclick="touch()">Dice</button>
+            <img src="./img/1.png" alt="Dice-Face: 1" id="face1" class="set">
+            <img src="./img/2.png" alt="Dice-Face: 2" id="face2" class="set">
+            <img src="./img/3.png" alt="Dice-Face: 3" id="face3" class="set">
+            <img src="./img/4.png" alt="Dice-Face: 4" id="face4" class="set">
+            <img src="./img/5.png" alt="Dice-Face: 5" id="face5" class="set">
+            <img src="./img/6.png" alt="Dice-Face: 6" id="face6" class="set">
+            <div class="see">
+
+
+            </div>
+        </div>
+    </center>
+
+    <script>
+        function touch() {
+            var random = Math.round(Math.random() * 5 + 1);
+            console.log(random);
+            var see = document.getElementById("see")
+            if (random == 1) {
+                document.getElementById("face1").style.display = "block";
+                location.reload();
+            } else if (random == 2) {
+                document.getElementById("face2").style.display = "block";
+                location.reload();
+            }
+            else if (random == 3) {
+                document.getElementById("face3").style.display = "block";
+                location.reload();
+            }
+            else if (random == 4) {
+                document.getElementById("face4").style.display = "block";
+                location.reload();
+            }
+            else if (random == 5) {
+                document.getElementById("face5").style.display = "block";
+                location.reload();
+            }
+            else if (random == 6) {
+                document.getElementById("face6").style.display = "block";
+                location.reload();
+            } else {
+                alert("Try Again!");
+            }
+        }
+    </script>
+</body>
+
+</html>
